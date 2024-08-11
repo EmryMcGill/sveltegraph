@@ -34,3 +34,7 @@ Use the component in your project:
 ```
 
 - x-items prop takes an array of objects that has a title and a time represented in seconds.
+
+
+## License
+This project is under the MIT License

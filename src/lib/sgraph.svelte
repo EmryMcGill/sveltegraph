@@ -1,13 +1,13 @@
 <script>
     import { onMount } from "svelte";
     
-    export let items
+    export let x_items
 
     let time_max = 0
 
     onMount(() => {
         // find the max time
-        for (const item of items) {
+        for (const item of x_items) {
             if (time_max < item.time) {
                 time_max = item.time
             }
@@ -36,7 +36,7 @@
                 <p class='y-axis-item'>{(time_max/60)*0}h</p>
             </div>
             <div class='graph'>
-                {#each items as item}
+                {#each x_items as item}
                 <div class='bar-container' style='height:{(item.time/time_max)*100}%'>
                     <div class='bar'></div>
                     <p class='bar-label'>{item.title}</p>
